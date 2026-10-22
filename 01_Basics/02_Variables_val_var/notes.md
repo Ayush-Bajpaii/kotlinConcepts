@@ -74,6 +74,25 @@ fun main() {
 }
 ```
 
+### `const val`: a fixed value known before the program runs
+```kotlin
+const val MAX_USERS = 100      // written OUTSIDE main (at the top of the file)
+
+fun main() {
+    println(MAX_USERS)         // 100
+}
+```
+- Use for fixed values that never change, like limits or names.
+- Must be written **outside** any function.
+- Only for simple values: numbers, `true`/`false`, a single character, or text.
+- Name style: ALL CAPS with `_`: `MAX_USERS`.
+
+| | `val` | `const val` |
+|---|---|---|
+| Can change? | No | No |
+| Where | anywhere | only outside functions |
+| Value | can be decided while the program runs | must be fixed in the code itself |
+
 ## Key Points
 - `val` = cannot change. `var` = can change.
 - **Use `val` by default.** Use `var` only when the value really needs to change.
@@ -81,6 +100,7 @@ fun main() {
 - A variable's type cannot change: if `age` holds a number, you can't later put text in it.
 - A variable must have a value before you use it.
 - Naming style: **camelCase**: start small, each next word starts capital: `userName`, `totalPrice`.
+- `const val` = fixed value, written outside functions, name in ALL CAPS.
 
 ## Common Mistakes / Gotchas
 - Changing a `val` → error "Val cannot be reassigned". Make it `var` if it must change.
@@ -92,6 +112,7 @@ fun main() {
   - no spaces or dashes: `user name` ❌, `user-name` ❌
   - can't use keywords: `val val = 5` ❌
 - Names are case-sensitive: `age` and `Age` are two different variables.
+- `const val` inside `main` → error "Modifier 'const' is not applicable to 'local variable'". Move it above `main`.
 
 ## Practice Done
 - [ ] Create `val` variables for your name and city, and print them
@@ -99,6 +120,7 @@ fun main() {
 - [ ] Try changing a `val`. Read the error.
 - [ ] Try putting text into a number `var`. Read the error.
 - [ ] Make `var count = 0`, add 1 to it three times, print it after each change
+- [ ] Create `const val APP_NAME = "KotlinLearner"` above `main` and print it
 
 ## Doubts / Questions
 -

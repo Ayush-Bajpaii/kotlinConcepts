@@ -79,6 +79,9 @@ This also works. You will see it in older code. Today, `fun main()` is enough.
 - Missing `}` or `)` → error. Every opening bracket needs a closing one.
 - Writing code outside `main` (like `println("Hi")` on its own) → error.
 - Two files with `main` and no `package` line → "Conflicting overloads" error. Fix: add a different `package` line at the top of each file, like `package basics.helloworld`.
+- Package name with capitals or starting with a number (like `` `01_Basics` ``) → naming warning. Use small letters only: `package basics.helloworld`. It does not need to match the folder name.
+- File named `.kts` instead of `.kt` → `main` never runs. `.kts` is a script file. Always use `.kt`.
+- Typing the file's path in the terminal → "Permission denied". Run with the green ▶ arrow in IntelliJ.
 
 ## Practice Done
 - [ ] Create `HelloWorld.kt` in this folder and print "Hello, World!"
