@@ -1,4 +1,4 @@
-package basics.typeConversion
+package basics.typeconversion
 
 
 fun main(){

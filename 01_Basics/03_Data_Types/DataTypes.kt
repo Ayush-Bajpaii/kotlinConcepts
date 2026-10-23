@@ -1,4 +1,4 @@
-package basics.dataTypes
+package basics.datatypes
 
 
 fun main(){

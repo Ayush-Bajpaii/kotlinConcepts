@@ -1,4 +1,4 @@
-package basics.typeInference
+package basics.typeinference
 
 fun main(){
     val h : String = "Hello"
